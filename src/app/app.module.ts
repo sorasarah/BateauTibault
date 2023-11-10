@@ -1,16 +1,13 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { RouteReuseStrategy } from '@angular/router';
-
-import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
+import { IonicModule } from '@ionic/angular'; // Importez IonicModule ici
 
 import { AppComponent } from './app.component';
-import { AppRoutingModule } from './app-routing.module';
+import { FooterComponent } from './components/footer/footer.component'; // Assurez-vous que le chemin est correct
 
 @NgModule({
-  declarations: [AppComponent],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
-  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
+  declarations: [AppComponent, FooterComponent], // Ajoutez FooterComponent ici
+  imports: [BrowserModule, IonicModule.forRoot()],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
