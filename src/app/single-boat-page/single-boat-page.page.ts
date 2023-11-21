@@ -1,4 +1,3 @@
-import { BoatsService } from './../services/boats.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { NavController } from '@ionic/angular';
