@@ -1,19 +1,35 @@
-/* resto.page.scss */
+/* Votre fichier SCSS correspondant */
 
-ion-title {
-  font-size: 24px;
-  font-weight: bold;
-  color: #333;
+ion-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f9f9f9;
+}
+
+.restaurant-card {
+  width: 90%;
+  max-width: 400px;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 15px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease; /* Effet de transition au survol */
+}
+
+.restaurant-card:hover {
+  transform: translateY(-5px); /* Effet de léger décalage au survol */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Ombre plus prononcée au survol */
 }
 
 ion-button {
-  margin-bottom: 10px;
-  background-color: #f0f0f0;
-  color: #333;
+  width: 100%;
+  margin-top: 15px;
+  --background: #2ecc71;
+  --color: #ffffff;
   border-radius: 8px;
-  padding: 10px 20px;
-}
-
-ion-button:hover {
-  background-color: #ddd;
+  text-transform: uppercase;
+  font-weight: 600;
 }

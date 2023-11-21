@@ -10,9 +10,17 @@ const routes: Routes = [
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
-  },  {
+  },
+  {
     path: 'resto',
     loadChildren: () => import('./resto/resto.module').then( m => m.RestoPageModule)
+  },
+  {
+    path: 'bateaux',
+    loadChildren: () => import('./bateaux/bateaux.module').then( m => m.BateauxPageModule)
+  },  {
+    path: 'singleresto',
+    loadChildren: () => import('./singleresto/singleresto.module').then( m => m.SinglerestoPageModule)
   },
 
 ];
