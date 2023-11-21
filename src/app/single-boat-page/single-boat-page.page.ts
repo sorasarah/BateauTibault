@@ -1,7 +1,7 @@
 import { BoatsService } from './../services/boats.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Boat } from '../models/boat';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-single-boat-page',
@@ -10,12 +10,25 @@ import { Boat } from '../models/boat';
 })
 export class SingleBoatPagePage implements OnInit {
 
-  boatsList!: Boat[]
+  boat!: {
+    id: number,
+    name: string,
+    owner: string,
+    description: string,
+    img: string
+  };
 
-  constructor(private router: Router, private BoatsService: BoatsService) { }
+  constructor(private route:ActivatedRoute,  private router: Router, private navCtrl: NavController) { }
+  // constructor(private route:ActivatedRoute,  private router: Router, private navCtrl: NavController, private boatsService : BoatsService) { }
   
   ngOnInit() {
-    this.boatsList = this.BoatsService.boatsList.slice();
+    // this.boatsList = this.boatsService.boatsList.slice();
+    this.route.queryParams.subscribe(params =>{
+      if(this.router.getCurrentNavigation()?.extras.state){
+        this.boat = this.router.getCurrentNavigation()?.extras.state?.['boat'];
+        console.log(this.boat)
+      }
+    })
   }
 
 }

@@ -18,7 +18,7 @@ export class BateauxPage implements OnInit {
     this.boatsService.getBoats().subscribe(res => {
       this.boatsList = res;
     },
-    error =>{
+    error => {
       console.log("error")
     }) 
   }
@@ -29,7 +29,7 @@ export class BateauxPage implements OnInit {
         boat : boat
       }
     };
-    this.router.navigate(['single-boat'], navigationExtras);
+    this.router.navigate(['single-boat-page'], navigationExtras);
   }
 
 }
