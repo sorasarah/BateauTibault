@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
-import { BateauxPage } from './bateaux.page';
-import { BateauxPageRoutingModule } from './bateaux-routing.module';
+import { SingleBoatPagePage } from './single-boat-page.page';
+import { SingleBoatPagePageRoutingModule } from './single-boat-page-routing.module';
 import { SharedModule } from '../shared/shared.module';
 import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
@@ -12,8 +12,8 @@ import { NgModule } from '@angular/core';
     CommonModule,
     FormsModule,
     IonicModule,
-    BateauxPageRoutingModule
+    SingleBoatPagePageRoutingModule
   ],
-  declarations: [BateauxPage]
+  declarations: [SingleBoatPagePage]
 })
-export class BateauxPageModule {}
+export class SingleBoatPagePageModule {}

@@ -1,13 +1,20 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>bateaux</ion-title>
-  </ion-toolbar>
-</ion-header>
+<app-header></app-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">bateaux</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class="ion-padding">
+  <h1>Tous les eaux mènent à Thibault</h1>
+  <p>06.63.99.78</p>
+  <p>labateauthibault@gmail.com</p>
+  <p>facebook.com/lebateauthibault</p>
+
+  <ion-content id ="container" class="ion-padding">
+    <ion-list>
+      <ion-item>
+        <ion-label>
+          <ion-button *ngFor="let boat of boatsList" (click) ="onLoadBoats(boat)">Nom du bateau : {{boat.name}}</ion-button>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-content>
 </ion-content>
+
+<app-footer-tab></app-footer-tab>

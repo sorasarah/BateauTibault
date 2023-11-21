@@ -15,6 +15,10 @@ const routes: Routes = [
     path: 'bateaux',
     loadChildren: () => import('./bateaux/bateaux.module').then( m => m.BateauxPageModule)
   },
+  {
+    path: 'single-boat-page',
+    loadChildren: () => import('./single-boat-page/single-boat-page.module').then( m => m.SingleBoatPagePageModule)
+  },
 ];
 
 @NgModule({
