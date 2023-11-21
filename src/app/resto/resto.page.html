@@ -1,0 +1,20 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Restaurants partenaires</ion-title>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-buttons slot="end">
+
+    <ion-button *ngFor="let restaurant of restaurants" (click)="onButtonClicked(restaurant.id)">
+      {{ restaurant.name }}
+    </ion-button>
+
+    <ion-button
+    (click)="onButtonClicked(6)">Devenez partenaire!
+    </ion-button>
+
+  </ion-buttons>
+</ion-content>

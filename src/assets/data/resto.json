@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "name": "Bistrot des Gascons",
+    "photo": ".." ,
+    "location": "Paris"
+  },
+  {
+    "id": 2,
+    "name": "Les fous de l'île",
+    "photo": ".." ,
+    "location": "Bordeaux"
+  },
+  {
+    "id": 3,
+    "name": "Bistrot Landais",
+    "photo": ".." ,
+    "location": "Toulouse"
+  },
+  {
+    "id": 4,
+    "name": "Villa 9-Trois",
+    "photo": ".." ,
+    "location": "Nice"
+  },
+  {
+    "id": 5,
+    "name": "Bistrot du Sommelier",
+    "photo": ".." ,
+    "location": "Paris"
+  }
+]
