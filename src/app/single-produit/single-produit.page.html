@@ -14,7 +14,7 @@
         <li *ngIf="product.discount > 0">Promotion : {{ product.discount }} %</li>
         <li>Proriétaire : {{ product.owner}}</li>
       </ul>
-      <!-- <img [alt]="product.owner" [src]="product" /> -->
+      <img [alt]="product.owner" [src]="product.ownerPicture" />
     </ion-card-content>
   </ion-card>
 </ion-content>
