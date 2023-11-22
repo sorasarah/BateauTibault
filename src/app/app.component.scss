@@ -1,12 +1,12 @@
-.background-image{
-        background-image: url('../assets/iOS/background.png');
-        background-size: cover;
-        background-position: center;
-        height: 100vh; 
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: #fff; 
-        font-size: 24px;
-      }
-      
+ion-content{
+  --background: none;
+  --background-image: url('../assets/iOS/background.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+// ion-content {
+//         --background: none;
+//         background-image: url('../../assets/img/global/back.jpg');
+//         background-repeat: no-repeat;
+//         background-size: cover;
+//       }

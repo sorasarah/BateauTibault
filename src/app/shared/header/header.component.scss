@@ -1,5 +1,10 @@
 .logo{
-    width: 50%;
+    width: 15%;
+    margin: 0 auto;
+
+    @media (min-width: 320px) and (max-width: 480px) {
+        width: 30%;
+      }
 }
 .sizeMenu {
     --height: 60%;
