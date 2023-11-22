@@ -1,3 +1,13 @@
-.logo{
-    width: 30%;
+.sizeMenu {
+  --height: 60%;
+  --width: 35%;
+
+  @media (min-width: 320px) and (max-width: 480px) {
+    --height: 35%;  // Adjust the values for smaller screens
+    --width: 60%;
+  }
+}
+.logo {
+  width: 50px;
+  margin: 0 auto;
 }
