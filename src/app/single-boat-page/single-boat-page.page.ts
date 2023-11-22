@@ -19,7 +19,7 @@ export class SingleBoatPagePage implements OnInit {
 
   constructor(private route:ActivatedRoute,  private router: Router, private navCtrl: NavController) { }
   // constructor(private route:ActivatedRoute,  private router: Router, private navCtrl: NavController, private boatsService : BoatsService) { }
-  
+
   ngOnInit() {
     // this.boatsList = this.boatsService.boatsList.slice();
     this.route.queryParams.subscribe(params =>{

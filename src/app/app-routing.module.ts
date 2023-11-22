@@ -12,8 +12,16 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
+    path: 'resto',
+    loadChildren: () => import('./resto/resto.module').then( m => m.RestoPageModule)
+  },
+  {
     path: 'bateaux',
     loadChildren: () => import('./bateaux/bateaux.module').then( m => m.BateauxPageModule)
+  },
+  {
+    path: 'singleresto',
+    loadChildren: () => import('./singleresto/singleresto.module').then( m => m.SinglerestoPageModule)
   },
   {
     path: 'single-boat-page',
@@ -44,3 +52,6 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+
+
+
