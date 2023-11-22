@@ -7,9 +7,11 @@ import { IonicModule } from '@ionic/angular';
 import { SingleProduitPageRoutingModule } from './single-produit-routing.module';
 
 import { SingleProduitPage } from './single-produit.page';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   imports: [
+    SharedModule,
     CommonModule,
     FormsModule,
     IonicModule,
