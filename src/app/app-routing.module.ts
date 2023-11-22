@@ -11,7 +11,30 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
-
+  {
+    path: 'bateaux',
+    loadChildren: () => import('./bateaux/bateaux.module').then( m => m.BateauxPageModule)
+  },
+  {
+    path: 'single-boat-page',
+    loadChildren: () => import('./single-boat-page/single-boat-page.module').then( m => m.SingleBoatPagePageModule)
+  },
+  {
+    path: 'recettes',
+    loadChildren: () => import('./recettes/recettes.module').then( m => m.RecettesPageModule)
+  },
+  {
+    path: 'single-recette',
+    loadChildren: () => import('./single-recette/single-recette.module').then( m => m.SingleRecettePageModule)
+  },
+  {
+    path: 'single-produit',
+    loadChildren: () => import('./single-produit/single-produit.module').then( m => m.SingleProduitPageModule)
+  },
+  {
+    path: 'produits',
+    loadChildren: () => import('./produits/produits.module').then( m => m.ProduitsPageModule)
+  },
 ];
 
 @NgModule({
