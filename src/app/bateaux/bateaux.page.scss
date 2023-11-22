@@ -1,3 +1,10 @@
+ion-content{
+    background-image: url('../../assets/img/global/boats2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    --background: none;
+}
+
 .liste{
     text-align: center;
     padding: 20px;
@@ -5,4 +12,15 @@
 
 .btnlist{
     padding: 15px;
+}
+
+
+ion-card {
+    width: 250px; /* Largeur fixe des cartes */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
 }

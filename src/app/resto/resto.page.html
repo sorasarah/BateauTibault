@@ -1,16 +1,19 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>Restaurants partenaires</ion-title>
-  </ion-toolbar>
-</ion-header>
+<app-header></app-header>
 
 <ion-content [fullscreen]="true" class="ion-padding">
-  <ion-card *ngFor="let restaurant of restaurantsList" class="restaurant-card">
-    <ion-card-content>
-      <ion-card-title>{{ restaurant.name }}</ion-card-title>
-      <ion-button expand="block" (click)="onLoadRestos(restaurant)">
-        Voir plus
-      </ion-button>
-    </ion-card-content>
-  </ion-card>
+  <h1>Tous les restaurants partenaires avec le bateau de Thibault!</h1>
+  <div class="restaurant-cards-container">
+    <!-- Utilisation d'une div pour contenir les cartes -->
+    <ion-card *ngFor="let restaurant of restaurantsList" class="restaurant-card">
+      <ion-card-content>
+        <ion-card-title>{{ restaurant.name }}</ion-card-title>
+        <img [src]="restaurant.photo" [alt]="restaurant.name" class="restaurant-image" />
+
+        <ion-button expand="block" (click)="onLoadRestos(restaurant)">
+          Voir plus
+        </ion-button>
+      </ion-card-content>
+    </ion-card>
+  </div>
 </ion-content>
+<app-footer-tab></app-footer-tab>

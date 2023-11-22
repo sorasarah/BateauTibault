@@ -1,18 +1,17 @@
 <app-header></app-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Produits</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <h1>Vente en direct depuis notre bateau</h1>
   <ion-list>
     <ion-item *ngFor="let product of productsList" >
       <ion-label (click) ="onLoadProducts(product)" class="itemList">
-        <ion-thumbnail>
-          <img [alt]="product.name" [src]="product.img" />
-        </ion-thumbnail>
-       <span class="singleNameListe">{{product.name}}</span><span>prix : {{product.price}} € / {{ product.unit }}</span>
+        <div class="productName">
+          <ion-thumbnail>
+            <img [alt]="product.name" [src]="product.img" />
+          </ion-thumbnail>
+          <span class="singleNameListe"><strong>{{ product.name }}</strong></span>
+        </div>
+        <span>{{ product.price }} € / {{ product.unit }}</span>
       </ion-label>
     </ion-item>
   </ion-list>
