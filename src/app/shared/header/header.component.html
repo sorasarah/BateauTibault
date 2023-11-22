@@ -1,19 +1,19 @@
 <ion-menu  side="end" contentId="main-content" class="sizeMenu">
   <ion-content  > 
     <ion-list side="end" >
-      <ion-item routerLink="/products">
+      <ion-item (click)="navigateToProduct('produits')">
         <ion-label>  <ion-icon name="fish"></ion-icon>  Produits et Promotions</ion-label>
       </ion-item>
-      <ion-item routerLink="/boats">
+        <ion-item (click)="navigateToBoat('bateaux')">
         <ion-label> <ion-icon name="boat"></ion-icon>  Bateau</ion-label>
       </ion-item>
-      <ion-item routerLink="/restaurants">
+      <ion-item (click)="navigateToResto('resto')">
         <ion-label> <ion-icon name="restaurant"></ion-icon> Restaurant</ion-label>
       </ion-item>
-      <ion-item routerLink="/recipes">
+      <ion-item (click)="navigateToRecette('recettes')">
         <ion-label> <ion-icon name="book"></ion-icon> Recettes</ion-label>
       </ion-item>
-      <ion-item routerLink="/contact">
+      <ion-item (click)="navigateToContact('contact')">
         <ion-label> <ion-icon name="call"></ion-icon> Contact</ion-label>
       </ion-item>
     </ion-list>
@@ -26,7 +26,8 @@
 <ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-button routerLink="/home">
+      <!-- <ion-button routerLink="home"> -->
+        <ion-button (click)="navigateToHome('home')">
         <ion-icon name="home"></ion-icon>
       </ion-button>
     </ion-buttons>

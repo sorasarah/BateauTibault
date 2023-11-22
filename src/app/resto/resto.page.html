@@ -1,10 +1,6 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>Restaurants partenaires</ion-title>
-  </ion-toolbar>
-</ion-header>
-
+<app-header></app-header>
 <ion-content [fullscreen]="true" class="ion-padding">
+  <ion-title>Restaurants partenaires</ion-title>
   <ion-card *ngFor="let restaurant of restaurantsList" class="restaurant-card">
     <ion-card-content>
       <ion-card-title>{{ restaurant.name }}</ion-card-title>
@@ -14,3 +10,4 @@
     </ion-card-content>
   </ion-card>
 </ion-content>
+<app-footer-tab></app-footer-tab>
