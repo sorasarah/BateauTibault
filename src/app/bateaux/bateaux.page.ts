@@ -19,7 +19,7 @@ export class BateauxPage implements OnInit {
       this.boatsList = res;
     },
     error => {
-      console.log("error")
+      console.log("boats error")
     }) 
   }
 
