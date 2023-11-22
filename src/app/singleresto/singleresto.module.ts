@@ -7,9 +7,11 @@ import { IonicModule } from '@ionic/angular';
 import { SinglerestoPageRoutingModule } from './singleresto-routing.module';
 
 import { SinglerestoPage } from './singleresto.page';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   imports: [
+    SharedModule,
     CommonModule,
     FormsModule,
     IonicModule,

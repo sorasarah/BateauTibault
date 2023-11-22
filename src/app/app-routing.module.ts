@@ -18,9 +18,14 @@ const routes: Routes = [
   {
     path: 'bateaux',
     loadChildren: () => import('./bateaux/bateaux.module').then( m => m.BateauxPageModule)
-  },  {
+  },
+  {
     path: 'singleresto',
     loadChildren: () => import('./singleresto/singleresto.module').then( m => m.SinglerestoPageModule)
+  },
+  {
+    path: 'single-boat-page',
+    loadChildren: () => import('./single-boat-page/single-boat-page.module').then( m => m.SingleBoatPagePageModule)
   },
 
 ];
@@ -32,3 +37,6 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+
+
+

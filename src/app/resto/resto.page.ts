@@ -18,7 +18,7 @@ export class RestoPage {
    this.restoService.getRestos().subscribe(res => {
     this.restaurantsList = res;
    }, error =>{
-    console.log("error")
+    console.log("Resto error")
    })
 
   }
