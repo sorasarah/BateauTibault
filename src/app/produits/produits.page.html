@@ -8,11 +8,11 @@
   </ion-header>
   <ion-list>
     <ion-item *ngFor="let product of productsList" >
-      <ion-label (click) ="onLoadProducts(product)" style="display: flex; justify-content: space-between; align-items: center">
+      <ion-label (click) ="onLoadProducts(product)" class="itemList">
         <ion-thumbnail>
           <img [alt]="product.name" [src]="product.img" />
         </ion-thumbnail>
-       <span>{{product.name}}</span> <span>prix : {{product.price}} € / {{ product.unit }}</span>
+       <span class="singleNameListe">{{product.name}}</span><span>prix : {{product.price}} € / {{ product.unit }}</span>
       </ion-label>
     </ion-item>
   </ion-list>

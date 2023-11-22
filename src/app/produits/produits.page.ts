@@ -35,7 +35,6 @@ export class ProduitsPage implements OnInit {
       console.log("Le produit n'est plus disponible")
       alert("Le produit n'est plus disponible")
     }
-
   }
 
 }

@@ -1,0 +1,13 @@
+.itemList{
+    display: flex; 
+    // justify-content: space-between; 
+    align-items: center
+}
+.singleNameListe{
+    text-align: left;
+    margin: 4px;
+    width: 40%;
+    height: 50px;
+    word-wrap: break-word;
+    border: solid red 3px;
+}

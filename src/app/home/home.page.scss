@@ -1,10 +1,14 @@
-#container {
+// .background-img {
+//   --background: url('../../assets/iOS/back.jpg') no-repeat  ;
+// }
+ion-content {
+  --background: none;
   background-image: url('../../assets/iOS/back.jpg');
-  background-size: cover;
-  background-position: top;
   background-repeat: no-repeat;
-  background-attachment: fixed; 
+  background-size: cover;
+}
 
+ #container {
   text-align: center;
   position: absolute;
   left: 0;

@@ -21,17 +21,35 @@ export class SingleProduitPage implements OnInit {
     comments: string,
     ownerPicture : string,
     unit : string,
+    quantity: number
   }
+
+  
 
   constructor(private route: ActivatedRoute, private router: Router) {  }
 
   ngOnInit() {
+    
     this.route.queryParams.subscribe( params => {
       if (this.router.getCurrentNavigation()?.extras.state) {
         this.product = this.router.getCurrentNavigation()?.extras.state?.['product'];
         console.log(this.product)
       }
+      this.product.quantity = 0
     })
   }
+
+  addQuantity(){
+    if (this.product){
+      this.product.quantity++
+    }
+  }
+
+  decrementQuantity(){
+    if(this.product && this.product.quantity > 0){
+      this.product.quantity--
+    }
+  }
+
 
 }

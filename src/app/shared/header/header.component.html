@@ -1,22 +1,43 @@
+<ion-menu  side="end" contentId="main-content" class="sizeMenu">
+  <ion-content > 
+    <ion-list side="end" >
+      <ion-item routerLink="/products">
+        <ion-icon name="fish" class="large"></ion-icon><ion-label>Produits et Promotions</ion-label>
+      </ion-item>
+      <ion-item routerLink="/boats">
+        <ion-icon name="boat"></ion-icon><ion-label>Bateau</ion-label>
+      </ion-item>
+      <ion-item routerLink="/restaurants">
+        <ion-icon name="restaurant"></ion-icon><ion-label>Restaurant</ion-label>
+      </ion-item>
+      <ion-item routerLink="/recipes">
+        <ion-icon name="book"></ion-icon><ion-label>Recettes</ion-label>
+      </ion-item>
+      <ion-item routerLink="/contact">
+        <ion-icon name="call"></ion-icon><ion-label>Contact</ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<ion-router-outlet id="main-content"></ion-router-outlet>
+
 <ion-header>
   <ion-toolbar>
-    <!-- Add your logo -->
     <ion-buttons slot="start">
-      <ion-button>
-        <ion-img src="../../../assets/icon/logoBT.png" class="logo" alt="logo"></ion-img> <!-- Replace 'logo-custom' with your icon name -->
+      <ion-button class="large">
+        <ion-icon name="home" routerLink="/home" ></ion-icon>
       </ion-button>
     </ion-buttons>
-
-    <!-- Add a home button -->
-    <ion-title>
-      Bateau Thibault
-    </ion-title>
-
-    <ion-buttons slot="end">
-      <ion-button routerLink="/home"> <!-- Update 'home' with your home route -->
-        <ion-icon name="home"></ion-icon>
-      </ion-button>
-    </ion-buttons>
-  </ion-toolbar>
+      <ion-buttons>
+        <ion-title>
+          <ion-img src="../../../assets/icon/logoBT.png" class="logo" alt="logo"></ion-img>
+        </ion-title>
+      </ion-buttons>
+      <ion-buttons slot="end">
+        <ion-menu-button class="large"></ion-menu-button>
+      </ion-buttons>
+   </ion-toolbar>
 </ion-header>
+       
 
