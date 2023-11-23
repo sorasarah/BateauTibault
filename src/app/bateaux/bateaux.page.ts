@@ -29,6 +29,7 @@ export class BateauxPage implements OnInit {
         boat : boat
       }
     };
+    let pageName = boat.name;
     this.router.navigate(['single-boat-page'], navigationExtras);
   }
 

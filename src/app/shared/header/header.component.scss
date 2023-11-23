@@ -1,18 +1,26 @@
-.logo {
-  width: 15%;
-  margin: 0 auto;
+.logo{
+width: 15%;
+margin: 0 auto;
 
-  @media (min-width: 320px) and (max-width: 480px) {
+@media (min-width: 320px) and (max-width: 480px) {
     width: 30%;
   }
 }
-
 .sizeMenu {
-  --height: 60%;
-  --width: 35%;
+  
+  --height: 65%;
+  --width: 50%;
 
   @media (min-width: 320px) and (max-width: 480px) {
-    --height: 35%; // Adjust the values for smaller screens
-    --width: 60%;
+    --height: 35%;  
+    --width: 80%;
   }
+}
+
+.large ion-icon {
+  font-size: 2.2rem; 
+}
+
+ion-icon{
+  margin-right: 15px
 }

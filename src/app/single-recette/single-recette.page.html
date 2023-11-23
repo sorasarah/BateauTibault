@@ -1,16 +1,17 @@
 <app-header></app-header>
 
 <ion-content class="ion-padding">
-  <ion-title></ion-title>
   <ion-card>
     <img [alt]="recipe.title" [src]="recipe.img" />
     <ion-card-header>
       <ion-card-title>{{recipe.title}}</ion-card-title>
     </ion-card-header>
     <ion-card-content>
+      <p><strong>Ingrédients : </strong></p>
       <ul>
         <li *ngFor ="let item of recipe.ingredients">{{ item }}</li>
       </ul>
+      <p><strong>Préparation :</strong></p>
       <p>{{recipe.preparation}}</p>
     </ion-card-content>
   </ion-card>

@@ -1,6 +1,6 @@
 
 ion-content{
-      background-image: url('../../assets/iOS/restobkgnd.png');
+      background-image: url('../../assets/img/global/restobkgnd.png');
       background-repeat: no-repeat;
       background-size: cover;
       --background: none;
@@ -9,8 +9,7 @@ ion-content{
       align-items: center;
       justify-content: center;
       text-align: center;
-      padding: 20px; /* Ajoutez un padding pour éviter que le contenu ne soit collé aux bords */
-
+      padding: 20px;
   p {
     margin: 10px 0;
     background-color: rgba(0, 0, 0, 0.1);
@@ -20,8 +19,8 @@ ion-content{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px; /* Espacement entre les cartes */
-    margin-top: 20px; /* Ajoute un espace au-dessus des cartes */
+    gap: 20px; 
+    margin-top: 20px; 
   }
 
   .restaurant-card {
@@ -60,7 +59,7 @@ ion-content{
       }
 
       ion-button {
-        width: 70%; /* Largeur du bouton réduite */
+        width: 70%;
         --background: #419fe7;
         --color: #ffffff;
         border-radius: 8px;
