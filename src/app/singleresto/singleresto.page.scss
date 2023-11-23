@@ -1,4 +1,8 @@
 ion-content {
+  background-image: url('../../assets/img/global/fishing.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    --background: none;
   display: flex;
   justify-content: center;
   align-items: center;
