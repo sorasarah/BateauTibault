@@ -42,7 +42,11 @@ const routes: Routes = [
   {
     path: 'produits',
     loadChildren: () => import('./produits/produits.module').then( m => m.ProduitsPageModule)
+  },  {
+    path: 'panier',
+    loadChildren: () => import('./panier/panier.module').then( m => m.PanierPageModule)
   },
+
 ];
 
 @NgModule({
