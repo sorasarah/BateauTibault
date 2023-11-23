@@ -42,9 +42,14 @@ const routes: Routes = [
   {
     path: 'produits',
     loadChildren: () => import('./produits/produits.module').then( m => m.ProduitsPageModule)
-  },  {
+  },
+  {
     path: 'panier',
     loadChildren: () => import('./panier/panier.module').then( m => m.PanierPageModule)
+  },
+  {
+    path: 'contact',
+    loadChildren: () => import('./contact/contact.module').then( m => m.ContactPageModule)
   },
 
 ];

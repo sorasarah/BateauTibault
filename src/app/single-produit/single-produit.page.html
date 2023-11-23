@@ -8,21 +8,24 @@
     </ion-card-header>
     <ion-card-content>
       <div class="quantity">
-        <ion-icon name="add-circle-outline" (click)="addQuantity(product)"></ion-icon>
-        <span>{{ product.quantity }}</span>
-        <ion-icon name="remove-circle-outline" (click)="removeQuantity(product)"></ion-icon>
+        <ion-icon name="remove-circle-outline" (click)="removeQuantity()"></ion-icon>
+        <span>{{ count }}</span>
+        <ion-icon name="add-circle-outline" (click)="addQuantity()"></ion-icon>
+        
       </div>
       <ion-button (click)="ajoutAuPanier(product)">AJOUTER</ion-button>
+
 
       <ul>
         <li>Catégorie: {{ product.category }}</li>
         <li>Prix: {{ product.price }} € <span>{{ product.unit }}</span></li>
         <li *ngIf="product.discount > 0">Promotion: {{ product.discount }} %</li>
       </ul>
-      <img [alt]="product.owner" [src]="product.ownerPicture" style="margin: auto; display: block" />
-      <p style="text-align: center;">the owner: {{ product.owner }}</p>
+      <img [alt]="product.owner" [src]="product.ownerPicture" style="margin: auto; display:block" />
+      <p style="text-align: center;">the owner : {{ product.owner}}</p>
+
     </ion-card-content>
   </ion-card>
 </ion-content>
-
 <app-footer-tab></app-footer-tab>
+

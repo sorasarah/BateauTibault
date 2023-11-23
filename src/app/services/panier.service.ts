@@ -9,6 +9,11 @@ import { Router } from '@angular/router';
 import { Produits } from '../models/produits';
 import { StorageService } from './storage.service';
 
+interface CartItem {
+  product: Produits,
+  quantity: number
+}
+
 @Injectable({
   providedIn: 'root'
 })
@@ -45,22 +50,31 @@ private totalAmount$ = new BehaviorSubject<number>(0)
       return this.panierData$.asObservable();
     }
 
-    async addToCart(product: any){
+    async addToCart(product: Produits, count: number){
 
       let panier = await this.storage.get('panier');
 
       if (panier) {
-        let exist = panier.filter((produit:any)=> produit.id === product.id)
+        let exist = panier.filter((cartItem: CartItem)=> cartItem.product.id === product.id)
         if (exist.length === 0) {
-          panier.push(product);
+          let cartItem = {
+            "product":product,
+            "quantity":count
+          }
+          panier.push(cartItem);
           this.storage.set('panier', panier)
         } else {
-          let existingProductIndex = panier.findIndex((produit: any) => produit.id === product.id);
-          panier[existingProductIndex].quantity +=1
+          let existingProductIndex = panier.findIndex((cartItem: CartItem) => cartItem.product.id === product.id);
+          panier[existingProductIndex].quantity +=count
           this.storage.set('panier', panier)
         }
       } else {
-        panier = [product];
+        panier = [];
+        let cartItem = {
+          "product":product,
+          "quantity":count
+        }
+        panier.push(cartItem);
         this.storage.set('panier', panier)
       }
     }

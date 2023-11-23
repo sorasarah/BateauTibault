@@ -28,9 +28,9 @@ export class SingleProduitPage implements OnInit {
     unit : string,
     quantity: number,
     in_panier: number
-
-
   }
+
+  count:number = 1
 
 
 
@@ -39,7 +39,6 @@ export class SingleProduitPage implements OnInit {
               private panierService: PanierService) {  }
 
   ngOnInit() {
-
     this.route.queryParams.subscribe( params => {
       if (this.router.getCurrentNavigation()?.extras.state) {
         this.product = this.router.getCurrentNavigation()?.extras.state?.['product'];
@@ -48,14 +47,12 @@ export class SingleProduitPage implements OnInit {
       this.product.quantity = 0
     })
   }
-  addQuantity(product: Produits) {
-    product.quantity++;
+  addQuantity() {
+    this.count++
   }
 
-  removeQuantity(product: Produits) {
-    if (product.quantity > 0) {
-      product.quantity--;
-    }
+  removeQuantity() {
+    this.count--;
   }
 
   ajoutAuPanier(product: {
@@ -74,7 +71,7 @@ export class SingleProduitPage implements OnInit {
     quantity: number
     in_panier: number
   }) {
-    this.panierService.addToCart(product);
+    this.panierService.addToCart(product, this.count);
   }
 
   }
@@ -84,6 +81,7 @@ export class SingleProduitPage implements OnInit {
   //     this.product.quantity--
   //   }
   // }
+
 
 
 
