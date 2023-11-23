@@ -1,15 +1,17 @@
 <app-header></app-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">recettes</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <h1>Toutes les recettes de Bateau Thibault</h1>
   <ion-list>
+    <ion-title>Nos recettes</ion-title>
     <ion-item *ngFor="let recipe of recipesList" >
-      <ion-label>
-        <ion-button (click) ="onLoadRecipes(recipe)">Nom de la recette : {{recipe.title}}</ion-button>
+      <ion-label (click) ="onLoadRecipes(recipe)">
+        <div class="recipeName">
+          <ion-thumbnail>
+            <img [alt]="recipe.title" [src]="recipe.img" />
+          </ion-thumbnail>
+          <span><strong>{{recipe.title}}</strong></span>
+        </div>
       </ion-label>
     </ion-item>
   </ion-list>

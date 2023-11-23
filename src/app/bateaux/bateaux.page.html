@@ -1,14 +1,17 @@
 <app-header></app-header>
 
 <ion-content class="ion-padding">
-  <h1></h1>
+  <h1>Tous les eaux mènent à Thibault</h1>
   <ion-list>
-    <ion-header class="liste">
-      <ion-title>Tous les eaux mènent à Thibault</ion-title>
-    </ion-header>
+    <ion-title>Nos bateaux partenaires</ion-title>
     <ion-item *ngFor="let boat of boatsList">
-      <ion-label>
-        <ion-button (click) ="onLoadBoats(boat)">Nom du bateau : {{boat.name}}</ion-button>
+      <ion-label (click) ="onLoadBoats(boat)">
+        <div class="boatName">
+          <ion-thumbnail>
+            <img [alt]="boat.name" [src]="boat.img" />
+          </ion-thumbnail>
+          <span >Nom du bateau : {{boat.name}}</span>
+        </div>
       </ion-label>
     </ion-item>
   </ion-list>

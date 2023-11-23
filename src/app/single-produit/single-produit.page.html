@@ -7,9 +7,11 @@
       <ion-card-title>{{product.name}}</ion-card-title>
     </ion-card-header>
     <ion-card-content>
-        <ion-icon name="add-circle-outline" (click)="addQuantity()"></ion-icon>
-        <span> {{ product.quantity }}</span>
+        <div class="quantity">
+          <ion-icon name="add-circle-outline" (click)="addQuantity()"></ion-icon>
+        <span> {{product.quantity }}</span>
         <ion-icon name="remove-circle-outline" (click)="decrementQuantity()"></ion-icon>
+        </div>
       
       <ul>
         <li>Catégorie : {{ product.category}}</li>
