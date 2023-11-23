@@ -8,9 +8,9 @@
     </ion-card-header>
     <ion-card-content>
         <div class="quantity">
+          <ion-icon name="remove-circle-outline" (click)="decrementQuantity()"></ion-icon>
+          <span> {{product.quantity }}</span>
           <ion-icon name="add-circle-outline" (click)="addQuantity()"></ion-icon>
-        <span> {{product.quantity }}</span>
-        <ion-icon name="remove-circle-outline" (click)="decrementQuantity()"></ion-icon>
         </div>
         <ion-button>AJOUTER</ion-button>
       
