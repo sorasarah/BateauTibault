@@ -4,9 +4,10 @@ import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { AlertController, LoadingController, ToastController } from '@ionic/angular';
-import { Storage } from '@ionic/storage';
+// import { Storage } from '@ionic/storage';
 import { Router } from '@angular/router';
 import { Produits } from '../models/produits';
+import { StorageService } from './storage.service';
 
 @Injectable({
   providedIn: 'root'
@@ -28,20 +29,40 @@ private totalAmount$ = new BehaviorSubject<number>(0)
               private loadingController: LoadingController,
               private alertController: AlertController,
               private toastController: ToastController,
-              private storage: Storage,
+              private storage: StorageService,
               private router: Router) {
         this.totalAmount=0;
-        this.storage.get('panier').then(data =>{
-          if (data){
-            this.panierDataArray= data;
-            this.panierData$.next(this.panierDataArray);
-            // pour calculer le total
-          }
-        });
+        // this.storage.get('panier').then(data =>{
+        //   if (data){
+        //     this.panierDataArray= data;
+        //     this.panierData$.next(this.panierDataArray);
+        //     // pour calculer le total
+        //   }
+        // });
     }
 
     get panierData(): Observable<Panier>{
       return this.panierData$.asObservable();
+    }
+
+    async addToCart(product: any){
+
+      let panier = await this.storage.get('panier');
+
+      if (panier) {
+        let exist = panier.filter((produit:any)=> produit.id === product.id)
+        if (exist.length === 0) {
+          panier.push(product);
+          this.storage.set('panier', panier)
+        } else {
+          let existingProductIndex = panier.findIndex((produit: any) => produit.id === product.id);
+          panier[existingProductIndex].quantity +=1
+          this.storage.set('panier', panier)
+        }
+      } else {
+        panier = [product];
+        this.storage.set('panier', panier)
+      }
     }
 
     async ajoutAuPanier(produits: Produits){
@@ -68,7 +89,7 @@ private totalAmount$ = new BehaviorSubject<number>(0)
             text: "Voir Panier",
             cssClass: 'voir-panier',
             handler: ()=>{
-              this.router.navigateByUrl('/tabs/tab3').then();
+              this.router.navigateByUrl('../panier/panier.page.html').then();
             }
           }
         ],
@@ -108,16 +129,16 @@ private totalAmount$ = new BehaviorSubject<number>(0)
         if (index > -1) {
 
             // Limiter l'achat à 5 unité par commande
-            if (this.panierDataArray.produitsData[index].in_panier >= 5) {
-                this.panierDataArray.produitsData[index].in_panier = 5;
+            if (this.panierDataArray.produitsData[index].quantity >= 5) {
+                this.panierDataArray.produitsData[index].quantity = 5;
                 //TODO Calculate Total
-                this.storage.set('panier', {...this.panierDataArray}).then();
+                // this.storage.set('panier', {...this.panierDataArray}).then();
                 await loader.dismiss().then();
                 await toast.present().then();
             } else {
-                this.panierDataArray.produitsData[index].in_panier += 1;
+                this.panierDataArray.produitsData[index].quantity += 1;
                 //TODO Calculate Total
-                this.storage.set('panier', {...this.panierDataArray}).then();
+                // this.storage.set('panier', {...this.panierDataArray}).then();
                 await loader.dismiss().then();
                 await alert.present().then();
             }
@@ -129,12 +150,12 @@ private totalAmount$ = new BehaviorSubject<number>(0)
         else {
             this.panierDataArray.produitsData.push(produits);
             const newproduitsIndex = this.panierDataArray.produitsData.findIndex(p => p.id === produits.id);
-            this.panierDataArray.produitsData[newproduitsIndex].in_panier = 1;
+            this.panierDataArray.produitsData[newproduitsIndex].quantity = 1;
             // TODO Calculate Total
             await loader.dismiss().then();
             await alert.present().then();
             this.panierDataArray.count = this.panierDataArray.produitsData.length;
-            this.storage.set('panier', {...this.panierDataArray}).then();
+            // this.storage.set('panier', {...this.panierDataArray}).then();
             this.panierData$.next(this.panierDataArray);
         }
 
@@ -142,10 +163,10 @@ private totalAmount$ = new BehaviorSubject<number>(0)
 
     // When the panier is absolutely empty
     else {
-        this.panierDataArray.produitsData.push({...produits, in_panier: 1});
+        this.panierDataArray.produitsData.push({...produits, quantity: 1});
         this.panierDataArray.count = this.panierDataArray.produitsData.length;
         // TODO Calculate Total
-        this.storage.set('panier', {...this.panierDataArray}).then();
+        // this.storage.set('panier', {...this.panierDataArray}).then();
         await loader.dismiss().then();
         await alert.present().then();
         this.panierData$.next(this.panierDataArray);

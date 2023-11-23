@@ -1,0 +1,22 @@
+ion-content{
+    background-image: url('../../assets/img/global/recipes.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    --background: none;
+}
+
+ion-title, h1{
+    text-align: center;
+    margin: 15px;
+}
+
+ion-list{
+    margin: 3px;
+    opacity: 0.7;
+}
+
+.recipeName{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

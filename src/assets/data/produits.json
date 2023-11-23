@@ -11,7 +11,7 @@
     "comments": "Pêche à la corde",
     "owner": "tig1",
     "img" : "./assets/img/products/ailederaie.jpeg",
-    "ownerPicture": "./assets/img/proprio/Tig.png"
+    "ownerPicture": "./assets/img/proprio/TIG.png"
 },
 {
     "id": 9,
@@ -25,7 +25,7 @@
     "comments": "Hors saison,  pêche aux casiers",
     "owner": "tig2",
     "img" : "./assets/img/products/araignees.jpeg",
-    "ownerPicture": "./assets/img/proprio/Tig2.png"
+    "ownerPicture": "./assets/img/proprio/TIG2.png"
 },
 {
     "id": 3,
@@ -39,7 +39,7 @@
     "comments": "Plus de 1.5kg le poisson",
     "owner": "tig3",
     "img": "./assets/img/products/bar-de-ligne.png",
-    "ownerPicture": "./assets/img/proprio/Tig3.png"
+    "ownerPicture": "./assets/img/proprio/TIG3.png"
 },
 {
     "id": 2,
@@ -53,7 +53,7 @@
     "comments": "Environ 550-700g la pièce",
     "owner": "tig2",
     "img": "./assets/img/products/ligneBarPortion.png",
-    "ownerPicture": "./assets/img/proprio/Tig2.png"
+    "ownerPicture": "./assets/img/proprio/TIG2.png"
 },
 {
     "id": 10,
@@ -67,7 +67,7 @@
     "comments": "Hors saison, pêche à l'épuisette",
     "owner": "tig1",
     "img": "./assets/img/products/bouquetCuit.png",
-    "ownerPicture": "./assets/img/proprio/Tig1.png"
+    "ownerPicture": "./assets/img/proprio/TIG.png"
 },
 {
     "id": 1,
@@ -81,7 +81,7 @@
     "comments": "environ 300g",
     "owner": "tig3",
     "img": "./assets/img/products/filetBarLigne1.jpeg",
-    "ownerPicture": "./assets/img/proprio/Tig3.png"
+    "ownerPicture": "./assets/img/proprio/TIG3.png"
 },
 {
     "id": 5,
@@ -95,7 +95,7 @@
     "comments": "Pêche à la corde",
     "owner": "tig3",
     "img": "./assets/img/products/filetJulienne.png",
-    "ownerPicture": "./assets/img/proprio/Tig3.png"
+    "ownerPicture": "./assets/img/proprio/TIG.png"
 },
 {
     "id": 7,
@@ -109,7 +109,7 @@
     "comments": "",
     "owner": "tig1",
     "img": "./assets/img/products/huitreSTVaaste5.jpeg",
-    "ownerPicture": "./assets/img/proprio/Tig1.png"
+    "ownerPicture": "./assets/img/proprio/TIG.png"
 },
 {
     "id": 8,
@@ -123,7 +123,7 @@
     "comments": "",
     "owner": "tig2",
     "img": "./assets/img/products/huitreStVaste1.jpeg",
-    "ownerPicture": "./assets/img/proprio/Tig2.png"
+    "ownerPicture": "./assets/img/proprio/TIG2.png"
 },
 {
     "id": 13,
@@ -137,7 +137,7 @@
     "comments": "Médaille d'or Salon Agriculture",
     "owner": "tig2",
     "img": "./assets/img/products/huitreSTVaste2.jpeg",
-    "ownerPicture": "./assets/img/proprio/Tig2.png"
+    "ownerPicture": "./assets/img/proprio/TIG3.png"
 },
 {
     "id": 14,
@@ -151,7 +151,7 @@
     "comments": "Médaille d'or salon agriculture",
     "owner": "tig3",
     "img": "./assets/img/products/huitreStVaste1.jpeg",
-    "ownerPicture": "./assets/img/proprio/Tig3.png"
+    "ownerPicture": "./assets/img/proprio/TIG2.png"
 },
 {
     "id": 15,
@@ -165,7 +165,7 @@
     "comments": "Médaille d'or salon agriculture",
     "owner": "tig3",
     "img": "./assets/img/products/huitreSTVaaste5.jpeg",
-    "ownerPicture": "./assets/img/proprio/Tig3.png"
+    "ownerPicture": "./assets/img/proprio/TIG3.png"
 },
 {
     "id": 16,
@@ -179,7 +179,7 @@
     "comments": "",
     "owner": "tig1",
     "img": "./assets/img/products/huitreStVaste1.jpeg",
-    "ownerPicture": "./assets/img/proprio/Tig1.png"
+    "ownerPicture": "./assets/img/proprio/TIG.png"
 },
 {
     "id": 4,
@@ -193,7 +193,7 @@
     "comments": "Environ 550-700g la portion",
     "owner": "tig2",
     "img": "./assets/img/products/lieu-jaune.jpg",
-    "ownerPicture": "./assets/img/proprio/Tig2.png"
+    "ownerPicture": "./assets/img/proprio/TIG2.png"
 },
 {
     "id": 6,
@@ -207,6 +207,6 @@
     "comments": "",
     "owner": "tig3",
     "img": "./assets/img/products/moulePeche.jpeg",
-    "ownerPicture": "./assets/img/proprio/Tig3.png"
+    "ownerPicture": "./assets/img/proprio/TIG2.png"
 }
 ]
