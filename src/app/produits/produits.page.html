@@ -3,6 +3,7 @@
 <ion-content [fullscreen]="true">
   <h1>Vente en direct depuis notre Bateau Thibault</h1>
   <ion-list>
+    <ion-card>
     <ion-item *ngFor="let product of productsList" >
       <ion-label (click) ="onLoadProducts(product)" class="itemList">
         <div class="productName">
@@ -14,6 +15,7 @@
         <span>{{ product.price }} € / {{ product.unit }}</span>
       </ion-label>
     </ion-item>
+  </ion-card>
   </ion-list>
 </ion-content>
 
