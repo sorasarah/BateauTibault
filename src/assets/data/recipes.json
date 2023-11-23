@@ -1,0 +1,31 @@
+[
+    {
+        "id": 21,
+        "title": "Homard",
+        "ingredients": ["tomate", "salade", "oignons" ],
+        "preparation": "Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who",
+        "img" : "../assets/img/recipes/homardRecette.png"
+    },
+    {
+        "id": 22,
+        "title": "St Jacques",
+        "ingredients": ["tomate", "salade", "oignons" ],
+        "preparation": "an unknown typesetter in the 15th century who is thought to have scrambled parts of Cicero's De ",
+        "img" : "../assets/img/recipes/saintJacques.png"
+    },
+    {
+        "id": 23,
+        "title": "Bar",
+        "ingredients": ["tomate", "salade", "oignons" ],
+        "preparation": "Finibus Bonorum et Malorum for use in a type specimen book. It usually begins with:",
+        "img" : "../assets/img/recipes/barRecette.png"
+    },
+    {
+        "id": 24,
+        "title": "Tourteau",
+        "ingredients": ["tomate", "salade", "oignons" ],
+        "preparation": "Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed",
+        "img" : "../assets/img/logos/poulpe.png"
+    }
+  ]
+  

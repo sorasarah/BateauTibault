@@ -11,6 +11,41 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'resto',
+    loadChildren: () => import('./resto/resto.module').then( m => m.RestoPageModule)
+  },
+  {
+    path: 'bateaux',
+    loadChildren: () => import('./bateaux/bateaux.module').then( m => m.BateauxPageModule)
+  },
+  {
+    path: 'singleresto',
+    loadChildren: () => import('./singleresto/singleresto.module').then( m => m.SinglerestoPageModule)
+  },
+  {
+    path: 'single-boat-page',
+    loadChildren: () => import('./single-boat-page/single-boat-page.module').then( m => m.SingleBoatPagePageModule)
+  },
+  {
+    path: 'recettes',
+    loadChildren: () => import('./recettes/recettes.module').then( m => m.RecettesPageModule)
+  },
+  {
+    path: 'single-recette',
+    loadChildren: () => import('./single-recette/single-recette.module').then( m => m.SingleRecettePageModule)
+  },
+  {
+    path: 'single-produit',
+    loadChildren: () => import('./single-produit/single-produit.module').then( m => m.SingleProduitPageModule)
+  },
+  {
+    path: 'produits',
+    loadChildren: () => import('./produits/produits.module').then( m => m.ProduitsPageModule)
+  },  {
+    path: 'contact',
+    loadChildren: () => import('./contact/contact.module').then( m => m.ContactPageModule)
+  },
 
 ];
 
@@ -21,3 +56,6 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+
+
+
