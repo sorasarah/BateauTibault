@@ -19,12 +19,10 @@
         <li> Prix : {{ product.price}} € <span> {{ product.unit }}</span></li>
         <li *ngIf="product.discount > 0">Promotion : {{ product.discount }} %</li>
       </ul>
-      <img [alt]="product.owner" [src]="product.ownerPicture" style="margin: auto; display:block"/>
+      <img [alt]="product.owner" [src]="product.ownerPicture" style="margin: auto; display:block" />
       <p style="text-align: center;">the owner : {{ product.owner}}</p>
-      
+
     </ion-card-content>
   </ion-card>
 </ion-content>
-
-
 <app-footer-tab></app-footer-tab>

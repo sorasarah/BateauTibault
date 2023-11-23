@@ -29,7 +29,6 @@ export class SingleProduitPage implements OnInit {
   constructor(private route: ActivatedRoute, private router: Router) {  }
 
   ngOnInit() {
-    
     this.route.queryParams.subscribe( params => {
       if (this.router.getCurrentNavigation()?.extras.state) {
         this.product = this.router.getCurrentNavigation()?.extras.state?.['product'];
@@ -50,6 +49,4 @@ export class SingleProduitPage implements OnInit {
       this.product.quantity--
     }
   }
-
-
 }
