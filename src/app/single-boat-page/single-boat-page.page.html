@@ -1,0 +1,15 @@
+<app-header></app-header>
+
+<ion-content class="ion-padding">
+  <ion-card>
+    <img [alt]="boat.name" [src]="boat.img" />
+    <ion-card-header>
+      <ion-card-title>{{boat.name}}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>Propriétaire : {{boat.owner}}</p>
+      <p>Description: {{boat.description}}</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+<app-footer-tab></app-footer-tab> 

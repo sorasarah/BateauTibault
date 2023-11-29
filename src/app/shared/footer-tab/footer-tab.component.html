@@ -1,0 +1,14 @@
+<ion-footer>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/page-precedente"></ion-back-button>
+    </ion-buttons>
+
+    <!-- Contenu au centre (vide dans cet exemple) -->
+    <ion-title></ion-title>
+
+    <ion-buttons slot="end" (click)="navigateToPanier('/panier')">
+      <ion-icon name="cart" class="large"></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

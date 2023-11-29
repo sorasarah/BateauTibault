@@ -1,0 +1,17 @@
+
+<app-header></app-header>
+
+<ion-content>
+  <ion-card >
+    <img *ngIf=resto.photo [src]="resto.photo" [alt]="resto.name" />
+    <ion-card-header>
+      <ion-card-title>{{ resto.name }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>Location: {{ resto.location }}</p>
+      <p>Description: {{ resto.description }}</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+
+<app-footer-tab></app-footer-tab>

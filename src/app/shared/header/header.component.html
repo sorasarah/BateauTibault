@@ -1,0 +1,40 @@
+<ion-menu  side="end" contentId="main-content" class="sizeMenu">
+  <ion-content > 
+    <ion-list side="end" >
+      <ion-item (click)="navigateToProduct('/produits')">
+        <!-- <ion-item routerLink="produits"> -->
+        <ion-label>  <ion-icon name="fish"></ion-icon>  Produits et Promotions</ion-label>
+      </ion-item>
+        <ion-item (click)="navigateToBoat('/bateaux')">
+        <ion-label> <ion-icon name="boat"></ion-icon>  Bateaux</ion-label>
+      </ion-item>
+      <ion-item (click)="navigateToResto('/resto')">
+        <ion-label> <ion-icon name="restaurant"></ion-icon> Restaurants</ion-label>
+      </ion-item>
+      <ion-item (click)="navigateToRecette('/recettes')">
+        <ion-label> <ion-icon name="book"></ion-icon> Recettes</ion-label>
+      </ion-item>
+      <ion-item (click)="navigateToContact('/contact')">
+        <ion-label> <ion-icon name="call"></ion-icon> Contact</ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<ion-router-outlet id="main-content"></ion-router-outlet>
+
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="navigateToHome('/home')" class="large">
+        <ion-icon name="home"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+      <ion-buttons>
+          <ion-img src="../../../assets/icon/logoBT.png" class="logo" alt="logo"></ion-img>
+      </ion-buttons>
+      <ion-buttons slot="end">
+        <ion-menu-button class="large"></ion-menu-button>
+      </ion-buttons>
+   </ion-toolbar>
+</ion-header>

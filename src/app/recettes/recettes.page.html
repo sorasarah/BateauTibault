@@ -1,0 +1,19 @@
+<app-header></app-header>
+<ion-content [fullscreen]="true">
+  <h1>Toutes les recettes de Bateau Thibault</h1>
+  <ion-list>
+    <ion-title>Nos recettes</ion-title>
+    <ion-item *ngFor="let recipe of recipesList" >
+      <ion-label (click) ="onLoadRecipes(recipe)">
+        <div class="recipeName">
+          <ion-thumbnail>
+            <img [alt]="recipe.title" [src]="recipe.img" />
+          </ion-thumbnail>
+          <span><strong>{{recipe.title}}</strong></span>
+        </div>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
+
+<app-footer-tab></app-footer-tab>

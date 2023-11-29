@@ -1,0 +1,19 @@
+<app-header></app-header>
+<ion-content class="ion-padding">
+  <h1>Tous les eaux mènent à Thibault</h1>
+  <ion-list>
+    <ion-title>Nos bateaux partenaires</ion-title>
+    <ion-item *ngFor="let boat of boatsList">
+      <ion-label (click) ="onLoadBoats(boat)">
+        <div class="boatName">
+          <ion-thumbnail>
+            <img [alt]="boat.name" [src]="boat.img" />
+          </ion-thumbnail>
+          <span>{{boat.name}}</span>
+        </div>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
+
+<app-footer-tab></app-footer-tab>

@@ -1,0 +1,23 @@
+
+ion-content{
+    background-image: url('../../assets/img/global/fishing.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    --background: none;
+}
+
+ion-list{
+    margin: 3px;
+    opacity: 0.7;
+}
+
+.boatName{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1, ion-title{
+    text-align: center;
+    margin: 15px;
+}
