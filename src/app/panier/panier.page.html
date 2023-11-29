@@ -1,0 +1,24 @@
+<app-header></app-header>
+
+<ion-content class="ion-padding" >
+
+  <!-- Display the current items in the cart -->
+  <ion-list *ngIf="panier.length > 0">
+    <ion-item *ngFor="let item of panier">
+      <ion-label>{{ item.product.name }}</ion-label>
+      <ion-note slot="end">
+        {{ item.product.price | currency }} x {{ item.quantity }}
+      </ion-note>
+    </ion-item>
+  </ion-list>
+  <ion-card>
+  <!-- Show a message when the cart is empty -->
+  <ion-text *ngIf="panier?.length === 0" color="medium" class="ion-text-center">
+    Votre panier est vide.
+  </ion-text>
+  </ion-card>
+
+</ion-content>
+
+<app-footer-tab></app-footer-tab> 
+

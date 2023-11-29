@@ -1,3 +1,4 @@
+import { IonicStorageModule } from '@ionic/storage-angular';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
@@ -13,7 +14,9 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
     BrowserModule,
     IonicModule.forRoot(),
     AppRoutingModule,
-    HttpClientModule // Ajout du HttpClientModule ici
+    HttpClientModule,
+    IonicStorageModule.forRoot()
+
   ],
 
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],

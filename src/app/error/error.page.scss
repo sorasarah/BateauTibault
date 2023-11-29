@@ -1,0 +1,14 @@
+ion-content{
+    background-image: url('../../assets/img/global/fishing.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    --background: none;
+  }
+
+  ion-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    opacity: 0.8;
+  }

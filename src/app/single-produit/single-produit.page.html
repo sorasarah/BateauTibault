@@ -4,20 +4,19 @@
   <ion-card>
     <img [alt]="product.name" [src]="product.img" />
     <ion-card-header>
-      <ion-card-title>{{product.name}}</ion-card-title>
+      <ion-card-title>{{ product.name }}</ion-card-title>
     </ion-card-header>
     <ion-card-content>
         <div class="quantity">
-          <ion-icon name="remove-circle-outline" (click)="decrementQuantity()"></ion-icon>
-          <span> {{product.quantity }}</span>
+          <ion-icon name="remove-circle-outline" (click)="removeQuantity()"></ion-icon>
+          <span> {{count }}</span>
           <ion-icon name="add-circle-outline" (click)="addQuantity()"></ion-icon>
         </div>
-        <ion-button>AJOUTER</ion-button>
-      
+        <ion-button (click)="ajoutAuPanier(product)">AJOUTER</ion-button>
       <ul>
-        <li>Catégorie : {{ product.category}}</li>
-        <li> Prix : {{ product.price}} € <span> {{ product.unit }}</span></li>
-        <li *ngIf="product.discount > 0">Promotion : {{ product.discount }} %</li>
+        <li>Catégorie: {{ product.category }}</li>
+        <li>Prix: {{ product.price }} € <span>{{ product.unit }}</span></li>
+        <li *ngIf="product.discount > 0">Promotion: {{ product.discount }} %</li>
       </ul>
       <img [alt]="product.owner" [src]="product.ownerPicture" style="margin: auto; display:block" />
       <p style="text-align: center;">the owner : {{ product.owner}}</p>
@@ -26,3 +25,4 @@
   </ion-card>
 </ion-content>
 <app-footer-tab></app-footer-tab>
+
